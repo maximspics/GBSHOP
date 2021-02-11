@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productViewCell" rowHeight="277" id="KGk-i7-Jjw" customClass="ProductViewCell" customModule="GBShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="970" height="277"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="970" height="277"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cby-iq-jLl">
+                        <rect key="frame" x="5" y="10" width="80" height="257"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="Kmc-RL-nRZ"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="V25-2D-BTd">
+                        <rect key="frame" x="90" y="11" width="855" height="255"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-oG-Zwe">
+                                <rect key="frame" x="0.0" y="0.0" width="855" height="210"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6W-4j-v45">
+                                <rect key="frame" x="0.0" y="218" width="855" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F5m-Vo-9eW">
+                                <rect key="frame" x="0.0" y="238" width="855" height="17"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhh-2D-Ke0">
+                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEp-q6-6tn">
+                                        <rect key="frame" x="783" y="0.0" width="72" height="17"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                        <state key="normal" title="Добавить">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <imageReference key="image" image="cart" catalog="system" symbolScale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnAddToCartClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fc9-ji-6lO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="V25-2D-BTd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="06v-r8-Piz"/>
+                    <constraint firstItem="V25-2D-BTd" firstAttribute="leading" secondItem="Cby-iq-jLl" secondAttribute="trailing" constant="5" id="2Hd-kE-Gt6"/>
+                    <constraint firstItem="Cby-iq-jLl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="8LA-rr-69U"/>
+                    <constraint firstAttribute="bottom" secondItem="Cby-iq-jLl" secondAttribute="bottom" constant="10" id="NLk-7m-TG8"/>
+                    <constraint firstItem="Cby-iq-jLl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="h0d-fl-euE"/>
+                    <constraint firstAttribute="trailing" secondItem="V25-2D-BTd" secondAttribute="trailing" constant="25" id="kCo-Xu-RoW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="V25-2D-BTd" secondAttribute="bottom" id="rDC-Fk-uol"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnAddToCart" destination="uEp-q6-6tn" id="a3B-CA-LpH"/>
+                <outlet property="imgProduct" destination="Cby-iq-jLl" id="j4J-cD-7ro"/>
+                <outlet property="lblProductDescription" destination="L6W-4j-v45" id="jE5-JS-O19"/>
+                <outlet property="lblProductName" destination="jxa-oG-Zwe" id="cZT-jp-qfe"/>
+                <outlet property="lblProductPrice" destination="bhh-2D-Ke0" id="Dvu-la-ujz"/>
+            </connections>
+            <point key="canvasLocation" x="-33.333333333333336" y="210.60267857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+    </resources>
+</document>
